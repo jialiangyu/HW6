@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Detailedview.aspx.vb" Inherits="Detailedview" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="DetailView.aspx.vb" Inherits="Detailedview" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:SqlDataSource ID="sql_datasource" runat="server" ConnectionString="<%$ ConnectionStrings:db_stateFacts %>" DeleteCommand="DELETE FROM [jyu6_HW6] WHERE [ID] = @ID" InsertCommand="INSERT INTO [jyu6_HW6] ([recipe_name], [submitted_by], [Ingredient_1], [Ingredient_2], [Ingredient_3], [Ingredient_4], [Ingredient_5], [preparation], [notes]) VALUES (@recipe_name, @submitted_by, @Ingredient_1, @Ingredient_2, @Ingredient_3, @Ingredient_4, @Ingredient_5, @preparation, @notes)" SelectCommand="SELECT * FROM [jyu6_HW6]" UpdateCommand="UPDATE [jyu6_HW6] SET [recipe_name] = @recipe_name, [submitted_by] = @submitted_by, [Ingredient_1] = @Ingredient_1, [Ingredient_2] = @Ingredient_2, [Ingredient_3] = @Ingredient_3, [Ingredient_4] = @Ingredient_4, [Ingredient_5] = @Ingredient_5, [preparation] = @preparation, [notes] = @notes WHERE [ID] = @ID">
+        <asp:SqlDataSource ID="sql_datasource" runat="server" ConnectionString="<%$ ConnectionStrings:db_stateFacts %>" DeleteCommand="DELETE FROM [jyu6_HW6] WHERE [ID] = @ID" InsertCommand="INSERT INTO [jyu6_HW6] ([recipe_name], [submitted_by], [Ingredient_1], [Ingredient_2], [Ingredient_3], [Ingredient_4], [Ingredient_5], [preparation], [notes]) VALUES (@recipe_name, @submitted_by, @Ingredient_1, @Ingredient_2, @Ingredient_3, @Ingredient_4, @Ingredient_5, @preparation, @notes)" SelectCommand="SELECT * FROM [jyu6_HW6] WHERE ([ID] = @ID)" UpdateCommand="UPDATE [jyu6_HW6] SET [recipe_name] = @recipe_name, [submitted_by] = @submitted_by, [Ingredient_1] = @Ingredient_1, [Ingredient_2] = @Ingredient_2, [Ingredient_3] = @Ingredient_3, [Ingredient_4] = @Ingredient_4, [Ingredient_5] = @Ingredient_5, [preparation] = @preparation, [notes] = @notes WHERE [ID] = @ID">
             <DeleteParameters>
                 <asp:Parameter Name="ID" Type="Int32" />
             </DeleteParameters>
@@ -25,6 +25,9 @@
                 <asp:Parameter Name="preparation" Type="String" />
                 <asp:Parameter Name="notes" Type="String" />
             </InsertParameters>
+            <SelectParameters>
+                <asp:QueryStringParameter Name="ID" QueryStringField="ID" Type="Int32" />
+            </SelectParameters>
             <UpdateParameters>
                 <asp:Parameter Name="recipe_name" Type="String" />
                 <asp:Parameter Name="submitted_by" Type="String" />
@@ -38,8 +41,9 @@
                 <asp:Parameter Name="ID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
+        <span class="deleterecipe"><asp:Label ID="lb_delete" runat="server"></asp:Label></span>
         <br />
-        <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="ID" DataSourceID="sql_datasource" Height="50px" Width="125px">
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="ID" DataSourceID="sql_datasource" Height="50px" Width="125px">
             <Fields>
                 <asp:BoundField DataField="recipe_name" HeaderText="Recipe Name" SortExpression="recipe_name" />
                 <asp:BoundField DataField="submitted_by" HeaderText="Submitted By" SortExpression="submitted_by" />
@@ -50,7 +54,7 @@
                 <asp:BoundField DataField="Ingredient_5" HeaderText="Ingredient #5" SortExpression="Ingredient_5" />
                 <asp:BoundField DataField="preparation" HeaderText="Preparation" SortExpression="preparation" />
                 <asp:BoundField DataField="notes" HeaderText="Notes" SortExpression="notes" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             </Fields>
         </asp:DetailsView>
         <br />

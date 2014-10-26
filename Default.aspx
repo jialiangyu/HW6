@@ -38,19 +38,13 @@
                 <asp:Parameter Name="ID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NewReceipt.aspx">Add a New Recipe</asp:HyperLink>
         <br />
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="sql_Hw6">
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 <asp:BoundField DataField="recipe_name" HeaderText="Recipe Name" SortExpression="recipe_name" />
                 <asp:BoundField DataField="submitted_by" HeaderText="Submitted By" SortExpression="submitted_by" />
-                <asp:BoundField DataField="Ingredient_1" HeaderText="Ingredient #1" SortExpression="Ingredient_1" />
-                <asp:BoundField DataField="Ingredient_2" HeaderText="Ingredient #2" SortExpression="Ingredient_2" />
-                <asp:BoundField DataField="Ingredient_3" HeaderText="Ingredient #3" SortExpression="Ingredient_3" />
-                <asp:BoundField DataField="Ingredient_4" HeaderText="Ingredient #4" SortExpression="Ingredient_4" />
-                <asp:BoundField DataField="Ingredient_5" HeaderText="Ingredient #5" SortExpression="Ingredient_5" />
-                <asp:BoundField DataField="preparation" HeaderText="Preparation" SortExpression="preparation" />
-                <asp:BoundField DataField="notes" HeaderText="Notes" SortExpression="notes" />
+                <asp:HyperLinkField DataNavigateUrlFields="ID" DataNavigateUrlFormatString="DetailView.aspx?ID={0}" Text="View Details" />
             </Columns>
         </asp:GridView>
     
