@@ -53,7 +53,7 @@
                 <table class="table">
                     <tr>
 
-                        <td >
+                        <td id="title">
                             Recipe Name:
                         </td>
 
@@ -68,7 +68,7 @@
 
                     <tr>
 
-                        <td>
+                        <td id="title">
                             Submitted By:
                         </td>
 
@@ -84,7 +84,7 @@
 
                     <tr>
 
-                        <td>
+                        <td id="title">
                             Ingredient 1:
                         </td>
 
@@ -99,7 +99,7 @@
 
                     <tr>
 
-                        <td>
+                        <td id="title">
                             Ingredient 2:
                         </td>
 
@@ -111,7 +111,7 @@
 
                     <tr>
 
-                        <td>
+                        <td id="title">
                             Ingredient 3:
                         </td>
 
@@ -123,7 +123,7 @@
 
                     <tr>
 
-                        <td>
+                        <td id="title">
                             Ingredient 4:
                         </td>
 
@@ -135,7 +135,7 @@
 
                     <tr>
 
-                        <td>
+                        <td id="title">
                             Ingredient 5:
                         </td>
 
@@ -147,7 +147,7 @@
 
                     <tr>
 
-                        <td>
+                        <td id="title">
                             Preparation:
                         </td>
 
@@ -162,7 +162,7 @@
 
                     <tr>
 
-                        <td>
+                        <td id="title">
                             Notes:
                         </td>
 
