@@ -45,7 +45,7 @@
         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
         <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
         </h2><br />
-        <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID" DataSourceID="sql_newreceipt" DefaultMode="Insert">
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID" DataSourceID="sql_newreceipt" DefaultMode="Insert" Width="608px">
             <EditItemTemplate>
                
             </EditItemTemplate>
@@ -200,6 +200,7 @@
         <br />
     
     </div>
+        <br /><p class="center">© 2013. 6K:183 Software Design & Development</p>
     </form>
 </body>
 </html>

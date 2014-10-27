@@ -26,6 +26,10 @@ at luctus. Morbi nec blandit justo. Donec porta sagittis euismod.Cras quis congu
         <br /><p class="paragraph">Etiam vel lorem nec justo suscipit ornare. Sed risus urna, gravida nec convallis eu, viverra nec sem. Sed eget mauris magna. Sed vulputate tortor in tempus fringilla. Donec in
 commodo tellus. Ut laoreet ut lectus ac vehicula. Duis velit nulla, suscipit ut urna ac, facilisis elementum sapien. Interdumet malesuada fames ac ante ipsum primis in faucibus. Ut dui
 quam, imperdiet ornare est non, accumsan vulputate justo. Vestibulum sit amet erat a nunc consectetur pellentesque. Aenean imperdiet tellus nec augue eleifend condimentum.</p></div>
+    
+    <br /><p class="center">© 2013. 6K:183 Software Design & Development</p>
+    
+    
     </form>
 </body>
 </html>
