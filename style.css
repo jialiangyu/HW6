@@ -1,0 +1,12 @@
+body{ background: #D2B48C; font-family:"Comic Sans MS";}
+h2 {font-weight:bold; font-size:19pt; text-align:center;}
+h3 {font-weight:bold; font-size:35pt; text-align:center; font-style:italic;}
+h5{text-align:center; font-size:13pt;}
+h1{text-align:center; margin-left:45pt;margin-right:45pt;font-size:19pt;}
+table{margin-left:auto;margin-right:auto;}
+.gridview{margin-left:auto;margin-right:auto;background-color:#F08080;color:#FFFFFF;}
+.gridview th {background-color:#FFFF99;}
+.gridview2{margin-left:auto;margin-right:auto;color:black;}
+.gridview2 th{background-color:yellow;}
+.gridview2 td {background-color:#FFFFFF;}
+.paragraph{text-align:left;padding-left:25%;padding-right:25%;}
