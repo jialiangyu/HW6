@@ -51,8 +51,8 @@
         <br />
         
         <asp:Label ID="lb_delete" runat="server"></asp:Label></span></h2>
-        <h2><br />
-        <asp:DetailsView ID="DetailsView1" CssClass="gridview2" runat="server" AutoGenerateRows="False" DataKeyNames="ID" DataSourceID="sql_datasource" Height="50px" Width="492px">
+        <br />
+        <asp:DetailsView ID="DetailsView1" CssClass="gridview2" runat="server" AutoGenerateRows="False" DataKeyNames="ID" DataSourceID="sql_datasource" Height="238px" Width="225px">
             <Fields>
                 <asp:BoundField DataField="recipe_name" HeaderText="Recipe Name" SortExpression="recipe_name" />
                 <asp:BoundField DataField="submitted_by" HeaderText="Submitted By" SortExpression="submitted_by" />
@@ -67,7 +67,7 @@
             </Fields>
         </asp:DetailsView>
         <br />
-    </h2>
+   
     </div>
     </form>
 </body>
